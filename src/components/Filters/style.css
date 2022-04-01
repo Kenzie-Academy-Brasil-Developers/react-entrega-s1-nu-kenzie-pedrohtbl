@@ -1,0 +1,25 @@
+.filtros{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filtros__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filtros__container h1{
+    font-size: 16px;
+    font-weight: 700;
+    color: #212529;
+}
+
+.filtros li{
+    margin-right: 16px;
+}
+.filtros li:last-child{
+    margin-right: 0;
+}
