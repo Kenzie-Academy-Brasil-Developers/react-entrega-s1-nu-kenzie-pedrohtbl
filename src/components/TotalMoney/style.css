@@ -1,14 +1,16 @@
 .div__valor{
+    margin-top: 16px;
     width: 363px;
     height: 96px;
     display: flex;
+    justify-content: space-between;
     box-sizing: border-box;
     padding: 18px 24px 18px 24px;
+    border: 1px solid #E9ECEF;
 }
 
 .valor__text{
     width: 138px;
-    height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -16,12 +18,14 @@
 }
 
 .valor__text .total__text{
+    margin-top: 0;
     font-size: 16px;
     font-weight: 700;
     color: #212529;
 }
 
 .valor__desc{
+    margin-top: 0;
     font-size: 12px;
     font-weight: 400;
     color: #868E96;

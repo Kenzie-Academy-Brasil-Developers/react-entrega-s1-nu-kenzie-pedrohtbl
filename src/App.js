@@ -4,31 +4,37 @@ import TotalMoney from './components/TotalMoney';
 import List from './components/List';
 import Header from './components/Header';
 import Filters from './components/Filters';
+
 import './App.css';
 
 function App() {
   const [listTransactions, setListTransactions] = useState([])
+  const [filtro, setFiltro] = useState([])
 
-  const handleSubmit = (event) =>{
-    event.preventDefault()
-    const descricao = event.target.children[0].children[1].value
-    const valor = event.target.children[1].children[1].value
-    const tipo = event.target.children[2].children[1].value
-    
-    setListTransactions([...listTransactions,{description: descricao, type: tipo, value:Number(valor)}])
+  const filter = (tipo) =>{
+    setFiltro(listTransactions.filter((transaction)=>(transaction.type === tipo)))
+  }
 
+  const mostraTodas = () =>{
+    setFiltro(listTransactions)
+  }
+
+  const remove = () =>{
+    console.log('oi')
   }
 
   return (
     <div className="App">
       <Header/>
       <main>
-        <Form handleSubmit={handleSubmit}/>
-        <div className='transacoes'>
-          <Filters/>
-          <List listTransactions={listTransactions}/>
+        <div>
+          <Form listTransactions={listTransactions} setListTransactions={setListTransactions}/>
+          {listTransactions.length > 0  && <TotalMoney listTransactions={listTransactions}/>}
         </div>
-        
+        <div className='transacoes'>
+            <Filters filter={filter} todas={mostraTodas}/>
+          <List listTransactions={filtro.length === 0 ? listTransactions : filtro} remove={remove}/>
+        </div>  
       </main>
     </div>
   );

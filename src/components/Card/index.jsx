@@ -1,25 +1,19 @@
-
-import { useState } from 'react'
 import trash from '../../trash.svg'
 import './style.css'
+import { FaTrash } from 'react-icons/fa'
 
-const Card = ({description, value, type}) =>{
-
-    const [tipo, setTipo] = useState('')
-
-    const defineTipo = () =>{
-        type === 'Entrada'? setTipo('entrada') : setTipo('saida')
-        return tipo
-    }
-
+const Card = ({description, value, type ,remove}) =>{
+    
     return (
-        <li className= {defineTipo}>
+        <li className={`transacao ${type.toLowerCase()}`} >
             <div>
                 <h1>{description}</h1>
                 <span>{type}</span>
             </div>
-            <p>{value}</p>
-            <button><img src={trash}/></button>
+            <p>R$ {Math.abs(value)}</p>
+            <div id='remove' onClick={()=>{remove()}}>
+                <FaTrash/>
+            </div>
         </li>
     )
 }

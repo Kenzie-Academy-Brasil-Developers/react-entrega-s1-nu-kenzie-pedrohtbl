@@ -1,14 +1,16 @@
 import './style.css'
+import entradas from "../List"
 
-const Filters = () =>{
+const Filters = ({filter,todas}) =>{
+
+
     return (
-
         <div className='filtros__container'>
             <h1>Resumo financeiro</h1>
             <ul className="filtros">
-                <li><button>Todos</button></li>
-                <li><button>Entradas</button></li>
-                <li><button>Despesas</button></li>
+                <li><button onClick={()=>{todas()}}>Todos</button></li>
+                <li><button onClick={()=>{filter('Entrada')}}>Entradas</button></li>
+                <li><button onClick={()=>{filter('Saída')}}>Despesas</button></li>
             </ul>
         </div>
         
