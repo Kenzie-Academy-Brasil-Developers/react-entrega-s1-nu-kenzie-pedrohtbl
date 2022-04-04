@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .filtros__container h1{
@@ -22,4 +23,13 @@
 }
 .filtros li:last-child{
     margin-right: 0;
+}
+
+@media (max-width: 752px){
+    .filtros__container h1{
+       display: none;
+    }
+    .filtros__container{
+        justify-content: center;
+    }
 }

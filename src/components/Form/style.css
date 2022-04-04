@@ -7,7 +7,6 @@ form{
     box-sizing: border-box;
     background-color: #FFFFFF;
     border: 1px solid #E9ECEF;
-    margin-right: 58px;
     padding-top: 38px;
 }
 
@@ -28,7 +27,7 @@ input,select{
 }
 
 #description{
-    width: 314px;
+    width: 100%;
     margin-top: 12px;
     margin-bottom: 4.4px;
     padding-left: 15px;
@@ -38,6 +37,7 @@ input,select{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 90%;
 }
 
 .desciption__container span{
@@ -50,11 +50,12 @@ input,select{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 40%;
 }
 
 
 #value{
-    width: 128px;
+    width: 90%;
     height: 48px;
     padding-left: 15px;
     margin-top: 9px;
@@ -64,7 +65,7 @@ input,select{
 #type{
     margin-top: 9px;
     height: 48px;
-    width: 150px;
+    width: 100%;
     margin-left: 36px;
 }
 
@@ -73,6 +74,35 @@ input,select{
 }
 
 .submit{
-    width: 314px;
+    width: 92%;
     height: 48px;
+}
+@media (max-width: 752px){
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 10px;
+        width: 280px;
+        height: 390px;
+        margin-bottom: 30px;
+    }
+
+    .label__tipo{
+        margin-top: 15px;
+        margin-left: 0;
+    }
+    label{
+        margin-top: 10px;
+    }
+
+    #type{
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+
 }

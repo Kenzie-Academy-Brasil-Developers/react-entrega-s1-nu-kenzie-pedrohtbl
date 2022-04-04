@@ -36,3 +36,10 @@
     font-weight: 700;
     color: #FD377E
 }
+
+@media (max-width: 752px){
+    .div__valor{
+        width: 280px;
+        margin-bottom: 30px;
+    }
+}

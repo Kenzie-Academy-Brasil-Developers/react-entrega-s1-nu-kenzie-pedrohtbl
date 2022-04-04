@@ -9,7 +9,7 @@ const List = ({listTransactions,remove}) =>{
     return(
       
             <ul>
-                {listTransactions.map(({description, value,type}, index) => <Card description={description} value={value} type={type} remove={remove} key={index}/>)}
+                {listTransactions.map(({description, value,type,id}, index) => <Card description={description} id={id} value={value} type={type} remove={remove} key={index}/>)}
             </ul>
    
         

@@ -6,14 +6,17 @@ const Form = ({listTransactions, setListTransactions}) =>{
     const [name, setName] = useState('')
     const [value, setValue] = useState(0)
     const [type, setType] = useState('Entrada')
+    const [id, setId] = useState(0)
 
     const handleSubmit = (event) =>{
         event.preventDefault()
+
+        setId(id + 1)
     
         type === 'Saída' ?
-        setListTransactions([...listTransactions,{description: name, type: type, value:-1*(Number(value))}])
+        setListTransactions([...listTransactions,{id: id, description: name, type: type, value:-1*(Number(value))}])
         :
-        setListTransactions([...listTransactions,{description: name, type: type, value:Number(value)}])
+        setListTransactions([...listTransactions,{id: id, description: name, type: type, value:Number(value)}])
     }
 
 

@@ -55,13 +55,31 @@ button:focus{
 }
 
 .transacoes{
-  width: 562px;
+  width: 50%;
   margin: 0;
 }
 
 main{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.divForm {
+  width: 363px;
+}
+
+@media (max-width: 752px){
+  .transacoes{
+    width: 363px;
+    margin: 0;
+  }
+
+  .divForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 @keyframes App-logo-spin {

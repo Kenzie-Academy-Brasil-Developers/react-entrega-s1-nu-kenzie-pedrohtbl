@@ -1,14 +1,15 @@
 .transacao{
-    width: 560px;
+    width: 100%;
     height: 87px;
     display: flex;
     border-radius: 4px;
     list-style: none;
     background-color: #F8F9FA;
     margin-bottom: 32px;
+    justify-content: space-between;
 }
 
-#remove{
+.remove{
     width: 22px;
     height: 22px;
     background-color: #E9ECEF;
@@ -23,7 +24,7 @@
     color: #868E96;
 }
 
-#remove:hover{
+.remove:hover{
     background-color: #868E96;
     color: #F8F9FA;
 }
@@ -77,4 +78,10 @@
 .transacao button img{
     width: 9px;
     height: 9px;
+}
+
+@media (max-width: 752px){
+    .transacao {
+        width: 80%;
+    }
 }

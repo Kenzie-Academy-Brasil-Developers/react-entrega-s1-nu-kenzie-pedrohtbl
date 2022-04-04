@@ -4,3 +4,11 @@ ul{
     padding: 0;
     margin-top: 24px;
 }
+
+@media (max-width: 752px){
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
