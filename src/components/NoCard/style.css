@@ -1,0 +1,58 @@
+.vazio{
+    width: 100%;
+    margin: 0 auto;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+.vazio img{
+    width: 80%;
+}
+
+.cardVazio{
+    width: 100%;
+    height: 87px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 11px;
+    border-radius: 4px;
+    list-style: none;
+    background-color: #F8F9FA;
+    margin-bottom: 32px;
+    border-left: solid 4px #E9ECEF;
+}
+
+.vazio>h1{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    color: #5B6166;
+    display: flex;
+    margin-top: 27px;
+    margin-bottom: 27px;
+}
+
+.vazio div h1{
+    background-color: #E9ECEF;
+    width: 330px;
+    height: 13px;
+    margin-top: 24px;
+    margin-bottom: 13px;
+}
+.vazio div span{
+    background-color: #E9ECEF;
+    width: 76px;
+    height: 13px;
+}
+
+@media (max-width: 752px){
+    .vazio{
+        width: 80%;
+    }
+    .vazio div h1{
+        width: 70%;
+    }
+    .vazio h1{
+        font-size: 16px;
+    }
+}

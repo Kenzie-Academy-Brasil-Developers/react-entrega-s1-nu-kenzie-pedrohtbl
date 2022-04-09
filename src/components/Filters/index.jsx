@@ -1,5 +1,4 @@
 import './style.css'
-import entradas from "../List"
 
 const Filters = ({filter,todas}) =>{
 
